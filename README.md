@@ -18,4 +18,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 https://scotch.io/tutorials/simple-language-translation-in-angular-2-part-2
 
-##
+## Demo
+
+https://babychou.github.io/angular2-simple-translation/
