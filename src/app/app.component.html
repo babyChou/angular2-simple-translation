@@ -1,3 +1,35 @@
 <h1>
   {{title}}
 </h1>
+
+<select #langVal (change)="selectLang(langVal.value)">
+  <option *ngFor="let lang of supportedLanguages" value="{{lang.value}}">{{lang.display}}</option>
+</select>
+
+<p>
+    Translate With Pipe: <strong>{{ 'hello world' | translate }}</strong>
+    <br>
+    <strong>{{ 'hello greet' | translate:['Jane', 'Doe'] }}</strong>
+</p>
+
+<!--single value-->
+<p>
+    Translate <strong class="text-muted">Well done %0</strong>:
+    <br>
+    <strong>{{ 'well done' | translate:'John' }}</strong>
+</p>
+
+<p>
+    Translate <strong class="text-muted">Good bye (fallback)</strong>:
+    <br>
+    <strong>{{ 'good bye' | translate }}</strong>
+</p>
+<p>
+    Translate with Service: <strong>{{ translatedText }}</strong>
+</p>
+
+https://scotch.io/tutorials/simple-language-translation-in-angular-2-part-2
+https://scotch.io/bar-talk/getting-to-know-angular-2s-module-ngmodule
+
+http://blog.rangle.io/angular-2-style-guide/
+
